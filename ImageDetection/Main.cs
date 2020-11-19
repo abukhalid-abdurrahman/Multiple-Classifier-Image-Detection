@@ -50,13 +50,13 @@ namespace ImageDetection
 
             foreach (var classifier in classifierProperties)
             {
-                var cascadeClassifier = new CascadeClassifier(classifier.ClassifierName);
+                var cascadeClassifier = new CascadeClassifier(classifier.ClassifierFileName);
                 Bitmap bitmap = LoadImage(fileName);
                 classifierResearchResults.Add(new ImageDetection(cascadeClassifier).Detect(bitmap, classifier.ClassifierName));
             }
 
             classifierResearchResult = classifierResearchResults.FirstOrDefault(x => x.IsCompleted == true);
-            if (classifierResearchResult.IsCompleted == true)
+            if (classifierResearchResult != null)
             {
                 imageBox.Image = classifierResearchResult.Bitmap;
                 categoryLabel.Text = classifierResearchResult.ClassifierName;

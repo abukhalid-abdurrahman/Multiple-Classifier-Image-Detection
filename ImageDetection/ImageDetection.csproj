@@ -66,10 +66,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClassifierProperty.cs" />
-    <Compile Include="ClassifierResearchResult.cs" />
-    <Compile Include="IDetectionImage.cs" />
-    <Compile Include="ImageDetection.cs" />
+    <Compile Include="ClassifierContext\ClassifierProperty.cs" />
+    <Compile Include="ClassifierContext\ClassifierResearchResult.cs" />
+    <Compile Include="ImageContext\IDetectionImage.cs" />
+    <Compile Include="ImageContext\ImageDetection.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
